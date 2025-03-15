@@ -1,0 +1,42 @@
+﻿/* Стили для всех устройств */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для экранов меньше 768px (мобильные устройства) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
+    header {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    nav {
+        flex-direction: column; /* Меню становится вертикальным */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Одна колонка вместо нескольких */
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на десктопе */
+    gap: 20px;
+}
+
+img {
+    max-width: 100%; /* Изображение не будет шире своего контейнера */
+    height: auto; /* Сохраняет пропорции */
+}
